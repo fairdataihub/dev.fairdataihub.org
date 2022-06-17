@@ -10,17 +10,17 @@ Comments are annotations in the source code of a program that are ignored by the
 
 As a developer, it can be frustrating to delve into code written by someone else that was not properly commented, and it’s remarkably easy to forget what your own code meant when you’re no longer immersed in the context of a program. Commenting your code early on will reinforce good programming habits throughout your career to avoid these issues later on.
 
-# Editor support - VS Code
+## Editor support - VS Code
 
 As Visual Studio Code is most widely used editor for JavaScript, let's see how it helps to write and highlight comments.
 
-## Intellisense
+### Intellisense
 
 In VS Code, you just need to type /\*\* and it will create the closing tag. IntelliSense works for JSDoc tags.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1599824523773/jLH7mUGf3.gif?auto=format,compress&gif-q=60&format=webm)
 
-## Extensions
+### Extensions
 
 We currently recommend two extensions to help you with writing comments:
 
@@ -31,6 +31,8 @@ We currently recommend two extensions to help you with writing comments:
 [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) is a great extension that helps you to highlight comments in a more readable way:
 
 ![](https://github.com/aaron-bond/better-comments/raw/master/images/better-comments.PNG)
+
+---
 
 # Syntax
 
@@ -99,6 +101,8 @@ With a [JSDoc](https://jsdoc.app/) style comment, we can describle our code in a
  */
 function Book(title, author) {}
 ```
+
+---
 
 # Dos & Don'ts
 
