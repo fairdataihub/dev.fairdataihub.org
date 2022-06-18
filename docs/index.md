@@ -6,7 +6,7 @@ titleTemplate: Vite & Vue Powered Static Site Generator
 
 hero:
   name: FAIR Data Innovations Hub
-  text: ""
+  text: ''
   tagline: Making FAIR data practices more accessible.
   actions:
     - theme: brand

@@ -46,7 +46,7 @@ We write these comments with two forward slashes `//`:
 // This is a single line comment
 
 // Print "Hello, World!" to the console
-console.log("Hello, World!");
+console.log('Hello, World!');
 ```
 
 ```python
@@ -61,7 +61,7 @@ print("Hello, World!")
 These are used to annotate tiny and very specific snippets of content. Inline comments are more obvious as they are related to the exact line where we write it.
 
 ```js
-let s = "Hello world!"; // assign string literal to variable s
+let s = 'Hello world!'; // assign string literal to variable s
 ```
 
 ```python

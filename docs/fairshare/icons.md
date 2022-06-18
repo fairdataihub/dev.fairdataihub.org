@@ -68,7 +68,7 @@ Within FAIRshare, we use the same icon library for all platforms. All icons used
 To use the icon within the application you need to import the library into your component.
 
 ```js
-import { Icon } from "@iconify/vue";
+import { Icon } from '@iconify/vue';
 ```
 
 ```html
