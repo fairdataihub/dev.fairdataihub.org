@@ -10,12 +10,11 @@ As Google Analytics phases out Universal Analytics we have switched to a custom 
 
 As of right now the new analytics system exposes a REST api endpoint that can be used to send data to. It only accepts data for storage and cannot be used to retrieve data from the database.
 
-
 ## Tech stack
 
 - Hosting platform: Vercel (AWS)
 
-- API: Vercel edge functions 
+- API: Vercel edge functions
 
 - Database: MongoDB
 
