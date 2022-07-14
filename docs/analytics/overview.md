@@ -8,7 +8,7 @@ description: Overview of the analytics platform
 
 As Google Analytics phases out Universal Analytics we have switched to a custom built platform that can handle event tracking from all of our apps.
 
-As of right now the new analytics system exposes a REST api endpoint that can be used to send data to. It only accepts data for storage and cannot be used to retreive data from the database.
+As of right now the new analytics system exposes a REST api endpoint that can be used to send data to. It only accepts data for storage and cannot be used to retrieve data from the database.
 
 
 ## Tech stack
