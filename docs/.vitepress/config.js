@@ -37,12 +37,12 @@ export default defineConfig({
 
     nav: [
       {
-        text: 'Home',
-        link: '/',
-      },
-      {
         text: 'Overview',
         link: '/docs/overview.md',
+      },
+      {
+        text: 'Analytics',
+        link: '/analytics/overview.md',
       },
       {
         text: 'SODA for SPARC',
@@ -64,6 +64,7 @@ export default defineConfig({
       '/general': sidebarGuide(),
       '/soda-for-sparc': sidebarGuide(),
       '/fairshare': sidebarGuide(),
+      '/analytics': sidebarGuide(),
     },
 
     footer: {
@@ -151,6 +152,12 @@ function sidebarGuide() {
           link: '/fairshare/fairshare-release.md',
         },
       ],
+    },
+
+    {
+      text: 'Analytics',
+      collapsible: true,
+      items: [{ text: 'Overview', link: '/analytics/overview.md' }],
     },
   ];
 }
