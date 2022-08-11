@@ -118,6 +118,7 @@ function sidebarGuide() {
       collapsible: true,
       items: [
         { text: 'Commenting code', link: '/general/comments.md' },
+        { text: 'Project setup', link: '/general/project-setup.md' },
         { text: '@fairdataihub/config', link: '/general/config.md' },
       ],
     },
