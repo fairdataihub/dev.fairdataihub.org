@@ -6069,9 +6069,11 @@ vite@^4.2.1:
     fsevents "~2.3.2"
 
 vitepress-plugin-mermaid@^2.0.10:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/vitepress-plugin-mermaid/-/vitepress-plugin-mermaid-2.0.10.tgz#91de3b7aec1932706e1e677a99efdb7024bd00bc"
-  integrity sha512-sujwlcuyK5vCyS9OfH3Fwq4V723nUFWlOsezDU+RcGtqO32Y8HHXpxejibIZSed5DsL9zdjTgScRmdZYG+PsSw==
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/vitepress-plugin-mermaid/-/vitepress-plugin-mermaid-2.0.13.tgz#075b7ce0707a644239629105b2f5ac5b9001f696"
+  integrity sha512-2c0ywXHE7kOK88Ygla9aGgkyF2JbfqfjE36JnoljW/3hQTR9rYBmfTFM5tvs4TUjCUfedUYT4CeyNolCY9t3uw==
+  optionalDependencies:
+    "@mermaid-js/mermaid-mindmap" "^9.3.0"
 
 vitepress-plugin-search@^1.0.4-alpha.17:
   version "1.0.4-alpha.20"
