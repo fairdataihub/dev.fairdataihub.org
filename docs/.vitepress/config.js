@@ -209,6 +209,10 @@ function sidebarGuide() {
           text: 'SODA Server',
           link: '/soda-for-sparc/soda-server.md',
         },
+        {
+          text: 'Function Workflows',
+          link: '/soda-for-sparc/function-flowcharts.md',
+        },
       ],
     },
 
