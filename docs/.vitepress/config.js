@@ -210,8 +210,12 @@ function sidebarGuide() {
           link: '/soda-for-sparc/soda-server.md',
         },
         {
-          text: 'Function Workflows',
-          link: '/soda-for-sparc/function-flowcharts.md',
+          text: 'Upload Dataset Workflows',
+          link: '/soda-for-sparc/upload-workflow.md',
+        },
+        {
+          text: 'Import Pennsieve Dataset Workflow',
+          link: '/soda-for-sparc/dataset-import-workflow.md',
         },
       ],
     },
