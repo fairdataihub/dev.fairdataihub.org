@@ -51,6 +51,19 @@ When generating datasets locally, the server will gather all files/folders and c
 ```mermaid
 graph LR
 
+subgraph localgen["generate_dataset_locally()"]
+    direction TB
+    A[[Create new folder for dataset or use existing folder if 'merge existing' is selected]]
+    A .-> B[[Scan the dataset structure and create all folders with new name if renamed]]
+    B .-> C[[Compile a list of files to be copied and a list of files to be moved with new name recorded if renamed]]
+    C .-> D[[Add high-level metadata files in the list]]
+    D .-> E[[Add manifest files in the list]]
+    E .-> F[[Add manifest files in the list]]
+    F .-> G[[Move files into new location]]
+    G .-> H[[Copy files into new location and track amount of copied files for loggin purposes]]
+    H .-> I[[Delete manifest folder and original folder if merge requested and rename new folder]]
+end
+
 
 ```
 
@@ -62,6 +75,17 @@ the upload process to track the progress of the upload.
 
 ```mermaid
 graph LR
+
+subgraph newgen["ps_upload_to_dataset()"]
+    direction TB
+    A[[Scan the dataset structure to create all non-existen folders on Pennsieve]] .-> B[[Create a tracking dictionary which would track the generation of the dataset on Pennsieve]]
+    B .-> C[[Scan the dataset structure and compile a list of files to be upload along with desired renaming]]
+    C .-> D[[Add high level metadata files to a list]]
+    D .-> E[[Add manifest files to a list]]
+    E .-> F[[Using the Pennsieve agent, upload the files to Pennsieve]]
+    F .-> G[[Upload the Metadata files]]
+    G .-> H[[Upload the manifest files]]
+end
 ```
 
 ## Generate Dataset To Existing Pennsieve Dataset
@@ -70,4 +94,17 @@ When generating datasets to an existing Pennsieve dataset there are more pre-che
 
 ```mermaid
 graph LR
+
+subgraph existinggen["ps_update_existing_dataset()"]
+    direction TB
+    A[[Remove all existing files on Pennsieve that user deleted]] .-> B[[Append '-DELETED' to any folders marked as deleted]]
+    B .-> C[[Rename any folder done by the user]]
+    C .-> D[[Get the status of all files currently on Pennsieve and create the folder path for all items in dataset structure]]
+    D .-> E[[Move any files that are marked as moved on Pennsieve]]
+    E .-> F[[Rename any Pennsieve files that are marks as 'renamed']]
+    F .-> G[[Delete any Pennsieve folders that are marked as 'deleted']]
+    G .-> H[[Delete any metadata files that are marked as 'deleted']]
+    H .-> I[[Run the original code to upload any new files to Pennsieve dataset]]
+    I --> J(ps_upload_to_dataset)
+end
 ```
