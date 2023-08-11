@@ -17,7 +17,7 @@ The upload process is the process of uploading data to a Pennsieve dataset. The 
 upload the data. The Agent then uploads the data to the Pennsieve dataset. The server then sends a request to the Pennsieve service to import the data. The Pennsieve service then imports the data into the Pennsieve dataset.
 
 ```mermaid
-graph LR
+graph TB
 A[SODA-for-SPARC] -- Upload Request --> B[(SODA Server)]
 
 subgraph main["main_curate_function()"]
@@ -35,10 +35,15 @@ subgraph main["main_curate_function()"]
     end
     subgraph newgen[" "]
         direction LR
-        K(generate_dataset_locally)
+        K(ps_upload_to_dataset)
+    end
+    subgraph existinggen[" "]
+        direction LR
+        L(ps_update_existing_dataset)
     end
     prechecks -- Generate Locally --> localgen
     prechecks -- Generate New Pennsieve Dataset --> newgen
+    prechecks -- Generate To Existing Pennsieve Dataset --> existinggen
 end
 
 B --> main
@@ -97,7 +102,7 @@ graph LR
 
 subgraph existinggen["ps_update_existing_dataset()"]
     direction TB
-    A[[Remove all existing files on Pennsieve that user deleted]] .-> B[[Append '-DELETED' to any folders marked as deleted]]
+    A[[Remove all existing files on Pennsieve that user deleted]] .-> B[[Rename and append '-DELETED' to any folders marked as deleted on Pennsieve]]
     B .-> C[[Rename any folder done by the user]]
     C .-> D[[Get the status of all files currently on Pennsieve and create the folder path for all items in dataset structure]]
     D .-> E[[Move any files that are marked as moved on Pennsieve]]
