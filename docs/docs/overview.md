@@ -2,6 +2,10 @@
 lang: en-US
 title: Overview
 description: Overview of how to use fairdataihub documentation
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairdataihub&title=Overview&org=fairdataihub&description=How%20to%20use%20fairdataihub%20developer%20documentation'
 ---
 
 # Overview

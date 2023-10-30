@@ -2,6 +2,10 @@
 lang: en-US
 title: Build instructions
 description: How to build FAIRshare
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairshare&title=Build%20%7C%20FAIRshare&org=fairdataihub&description=How%20to%20build%20FAIRshare'
 ---
 
 # Build instructions

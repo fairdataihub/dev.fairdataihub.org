@@ -2,6 +2,10 @@
 lang: en-US
 title: Commits on GitHub
 description: How to commit to a FAIR Data Innovations Hub repository
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairdataihub&title=Commits%20on%20GitHub&org=fairdataihub&description=How%20to%20commit%20to%20a%20FAIR%20Data%20Innovations%20Hub%20repository'
 ---
 
 # Conventional Commits

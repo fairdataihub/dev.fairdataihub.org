@@ -1,3 +1,13 @@
+---
+lang: en-US
+title: GitLab
+description: Using GitLab with fairdataihub
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairdataihub&title=GitLab&org=fairdataihub&description=Using%20GitLab%20with%20fairdataihub'
+---
+
 # Overview
 
 We primarily use GitHub to manage our code, issues and projects. However we do have a mirror of all our code in a GitLab organization as well.

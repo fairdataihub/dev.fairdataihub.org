@@ -1,7 +1,11 @@
 ---
 lang: en-US
 title: Icons
-description: How to use the documentation site
+description: How to generate app icons
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=soda-for-sparc&title=Icons%20%7C%20SODA%20for%20SPARC&org=fairdataihub&description=How%20to%20generate%20app%20icons'
 ---
 
 # App Icons

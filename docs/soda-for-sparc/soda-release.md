@@ -2,6 +2,10 @@
 lang: en-US
 title: Release procedure
 description: How to release SODA for SPARC to the public
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=soda-for-sparc&title=Release%20%7C%20SODA%20for%20SPARC&org=fairdataihub&description=How%20to%20release%20SODA%20for%20SPARC%20to%20the%20public'
 ---
 
 # Release procedure

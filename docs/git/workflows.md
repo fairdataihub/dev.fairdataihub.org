@@ -1,7 +1,11 @@
 ---
 lang: en-US
 title: GitHub actions
-description: How to commit to a FAIR Data Innovations Hub repository
+description: GitHub actions used by fairdataihub
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairdataihub&title=Overview&org=fairdataihub&description=How%20to%20use%20fairdataihub%20developer%20documentation'
 ---
 
 # GitHub Actions

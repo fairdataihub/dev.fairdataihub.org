@@ -2,6 +2,10 @@
 lang: en-US
 title: Build instructions
 description: How to build SODA for SPARC
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=soda-for-sparc&title=Build%20%7C%20SODA%20for%20SPARC&org=fairdataihub&description=How%20to%20build%20SODA%20for%20SPARC'
 ---
 
 # Build instructions

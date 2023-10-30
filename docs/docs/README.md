@@ -2,6 +2,10 @@
 lang: en-US
 title: Fairdataihub developer documentation
 description: How to use the documentation site
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairdataihub&title=About%20the%20documentation&org=fairdataihub&description=How%20to%20use%20the%20documentation%20site'
 ---
 
 # About the documentation

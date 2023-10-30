@@ -2,6 +2,10 @@
 lang: en-US
 title: SODA Server
 description: The SODA for SPARC server architecture, development, and testing guide
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=soda-for-sparc&title=Server%20%7C%20SODA%20for%20SPARC&org=fairdataihub&description=The%20SODA%20for%20SPARC%20server%20architecture%2C%20development%2C%20and%20testing%20guide'
 ---
 
 # Overview

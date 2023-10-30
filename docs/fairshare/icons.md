@@ -1,7 +1,11 @@
 ---
 lang: en-US
 title: Icons
-description: How to use the documentation site
+description: How to generate icons for FAIRshare
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairshare&title=Icons%7C%20FAIRshare&org=fairdataihub&description=How%20to%20generate%20icons%20for%20FAIRshare'
 ---
 
 # App icons

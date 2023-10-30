@@ -2,6 +2,10 @@
 lang: en-US
 title: Config files
 description: Some basic config files for all node projects
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairdataihub&title=Config%20files&org=fairdataihub&description=Some%20basic%20config%20files%20for%20all%20fairdataihub%20projects'
 ---
 
 # Overview

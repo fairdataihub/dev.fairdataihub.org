@@ -2,6 +2,10 @@
 lang: en-US
 title: Mermaid diagrams
 description: How to use mermaid diagrams in markdown files
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairdataihub&title=Mermaid%20&org=fairdataihub&description=How%20to%20use%20mermaid%20diagrams%20in%20markdown%20files'
 ---
 
 # Mermaid diagrams

@@ -2,6 +2,10 @@
 lang: en-US
 title: Project setup
 description: Snippets to quickly setup a project for FAIR Data Innovations Hub
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairdataihub&title=Project%20setup&org=fairdataihub&description=Snippets%20to%20quickly%20setup%20a%20project%20for%20FAIR%20Data%20Innovations%20Hub'
 ---
 
 # Overview

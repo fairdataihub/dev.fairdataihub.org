@@ -2,6 +2,10 @@
 lang: en-US
 title: Commenting code
 description: How to add comments to code in FAIR Data Innovations Hub projects
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairdataihub&title=Commenting%20code&org=fairdataihub&description=How%20to%20add%20comments%20to%20code%20in%20FAIR%20Data%20Innovations%20Hub%20projects'
 ---
 
 # Importance

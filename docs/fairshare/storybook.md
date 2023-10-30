@@ -1,7 +1,11 @@
 ---
 lang: en-US
 title: Storybook
-description: How to use the documentation site
+description: How to use storybook in FAIRshare
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=soda-for-sparc&title=Storybook%20%7C%20SODA%20for%20SPARC&org=fairdataihub&description=How%20to%20use%20storybook%20in%20FAIRshare'
 ---
 
 # Overview

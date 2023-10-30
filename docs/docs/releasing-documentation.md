@@ -2,6 +2,10 @@
 lang: en-US
 title: Documentation release procedure
 description: How to create changes to FAIRshare and SODA for SPARC documentation sites
+head:
+  - - meta
+    - name: 'og:image'
+      content: 'https://kalai.fairdataihub.org/api/generate?app=fairdataihub&title=Documentation%20release%20procedure&org=fairdataihub&description=How%20to%20create%20changes%20to%20FAIRshare%20and%20SODA%20for%20SPARC%20documentation%20sites'
 ---
 
 # SODA for SPARC/FAIRshare Docs Overview
