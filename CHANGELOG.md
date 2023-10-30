@@ -1,23 +1,20 @@
 ## [2.12.7](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.6...v2.12.7) (2023-10-23)
 
-
 ### Bug Fixes
 
-* **deps:** update dependency mermaid to v10.5.1 ([#175](https://github.com/fairdataihub/dev.fairdataihub.org/issues/175)) ([0552f4a](https://github.com/fairdataihub/dev.fairdataihub.org/commit/0552f4acf5997e6b260d1d654cb6eb74052b51d9))
+- **deps:** update dependency mermaid to v10.5.1 ([#175](https://github.com/fairdataihub/dev.fairdataihub.org/issues/175)) ([0552f4a](https://github.com/fairdataihub/dev.fairdataihub.org/commit/0552f4acf5997e6b260d1d654cb6eb74052b51d9))
 
 ## [2.12.6](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.5...v2.12.6) (2023-10-08)
 
-
 ### Bug Fixes
 
-* **deps:** update dependency mermaid to v10.5.0 ([#168](https://github.com/fairdataihub/dev.fairdataihub.org/issues/168)) ([410bccc](https://github.com/fairdataihub/dev.fairdataihub.org/commit/410bccca6d166a68f9f9e82269e0fd4934eded0a))
+- **deps:** update dependency mermaid to v10.5.0 ([#168](https://github.com/fairdataihub/dev.fairdataihub.org/issues/168)) ([410bccc](https://github.com/fairdataihub/dev.fairdataihub.org/commit/410bccca6d166a68f9f9e82269e0fd4934eded0a))
 
 ## [2.12.5](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.4...v2.12.5) (2023-08-29)
 
-
 ### Bug Fixes
 
-* **deps:** update dependency mermaid to v10.4.0 ([#151](https://github.com/fairdataihub/dev.fairdataihub.org/issues/151)) ([602df20](https://github.com/fairdataihub/dev.fairdataihub.org/commit/602df20502b17c11ba4ea047842156e22d6c1f18))
+- **deps:** update dependency mermaid to v10.4.0 ([#151](https://github.com/fairdataihub/dev.fairdataihub.org/issues/151)) ([602df20](https://github.com/fairdataihub/dev.fairdataihub.org/commit/602df20502b17c11ba4ea047842156e22d6c1f18))
 
 ## [2.12.4](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.3...v2.12.4) (2023-08-15)
 
