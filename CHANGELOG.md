@@ -1,3 +1,10 @@
+# [2.13.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.7...v2.13.0) (2023-10-30)
+
+
+### Features
+
+* ✨ add og images ([ad460b8](https://github.com/fairdataihub/dev.fairdataihub.org/commit/ad460b84fbafc24af41e9dc8ea9cbf05ff408524))
+
 ## [2.12.7](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.6...v2.12.7) (2023-10-23)
 
 ### Bug Fixes
