@@ -37,7 +37,7 @@
     "markdown-it": "^13.0.1",
     "prettier": "3.0.3",
     "semantic-release": "22.0.5",
-    "vite": "^4.2.1",
+    "vite": "^4.5.1",
     "vitepress": "1.0.0-alpha.33",
     "vitepress-plugin-search": "^1.0.4-alpha.17",
     "vue": "3.3.6"
