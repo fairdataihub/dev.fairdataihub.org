@@ -213,6 +213,10 @@ function sidebarGuide() {
           text: 'Error Handling',
           link: '/soda-for-sparc/error-handling.md',
         },
+        {
+          text: 'Testing Reference',
+          link: "/soda-for-sparc/testing-reference.md",
+        },
       ],
     },
 
