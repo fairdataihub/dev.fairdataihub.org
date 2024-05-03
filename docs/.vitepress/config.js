@@ -196,6 +196,8 @@ function sidebarGuide() {
       collapsible: true,
       items: [
         { text: 'Storybook', link: '/soda-for-sparc/storybook.md' },
+        { text: 'React', link: '/soda-for-sparc/react.md' },
+
         { text: 'Icons', link: '/soda-for-sparc/icons.md' },
         {
           text: 'Build instructions',
