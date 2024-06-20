@@ -14,9 +14,22 @@ SODA employs a custom React architecture to render components into designated "c
 
 # Creating a React Component
 
-For this example, we will create a basic text input.
+For this example, we will create a Counter React Component, render it to the DOM, and then update the state.
 
-First, we will create a React Component that
+The component will look like this
+
+```jsx
+import { Text, Button } from '@mantine/core';
+
+const Counter = ({counterName}}) => {
+  return (
+
+  )
+}
+const ExampleTextInput
+```
+
+First, we will create a React Component thatn
 
 First, add an empty div anywhere in the existing HTML that has a data-component-type attribute of the component you would like to create, for example 'example-text-input'
 
