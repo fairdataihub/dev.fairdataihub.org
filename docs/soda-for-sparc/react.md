@@ -10,23 +10,24 @@ head:
 
 # SODA React Overview
 
-SODA for SPARC's backend has a central error handler that receives errors from module/utility code called from any API endpoint and sends back an appropriate response to the client.
+SODA employs a custom React architecture to render components into designated "component slots," which are simply divs in the base HTML. The state of these components is managed by the state-management library Zustand, allowing state updates from both React components and external JavaScript files. SODA utilizes [Mantine](https://mantine.dev/) as its primary UI library, offering a comprehensive range of pre-built components used throughout the application.
 
-Currently the error handler expects to receive generic Python exceptions of type Exception, the requests's library HTTPException, and the Werkzeug HTTPError.
+# Creating a React Component
 
-How these types of errors are handled when throwing errors in the server code is detailed below.
+For this example, we will create a basic text input.
 
-::: tip
-The error handling code can be found in the file errorHandler.py within the pyflask folder.
-:::
+First, we will create a React Component that
 
-# How the Error Handler Handles Requests Library Errors
+First, add an empty div anywhere in the existing HTML that has a data-component-type attribute of the component you would like to create, for example 'example-text-input'
 
-First it should be noted that at the moment, SODA for SPARC only makes requests to Pennsieve APIs in the backend using the requests library. Therefore all errors from the requests library are from Pennsieve at the time these docs have been written.
+```html
+<div
+  data-component-type="example-text-input"
+  data-initial-text="Hello SODA developer!"
+></div>
+```
 
-::: tip
-This can be updated in the error handling code by checking the response URL attached to the message and seeing if the basename matches the Pennsieve URL. When adding newer services simply check for their URLs as well.
-:::
+Next we will want to
 
 ## How to raise requests errors to the error handler
 
