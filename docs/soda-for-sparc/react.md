@@ -10,57 +10,153 @@ head:
 
 # SODA React Overview
 
-SODA employs a custom React architecture to render components into designated "component slots," which are simply divs in the base HTML. The state of these components is managed by the state-management library Zustand, allowing state updates from both React components and external JavaScript files. SODA utilizes [Mantine](https://mantine.dev/) as its primary UI library, offering a comprehensive range of pre-built components used throughout the application.
+SODA employs a custom React architecture to dynamically render components into designated "component slots," which are simply div elements in the base HTML. The state of these components is managed by the state-management library Zustand, allowing state updates from both React components and external JavaScript files. SODA utilizes [Mantine](https://mantine.dev/) as its primary UI library, offering a comprehensive range of pre-built components used throughout the application.
 
-# Creating a React Component
+# Adding React Components to SODA
 
-For this example, we will create a Counter React Component, render it to the DOM, and then update the state.
+This tutorial will guide you through creating a component without state, and then we'll extend it to include state in the second part of the tutorial.
 
-The component will look like this
+## Step 1: Define the Component Slot in HTML
 
-```jsx
-import { Text, Button } from '@mantine/core';
-
-const Counter = ({counterName}}) => {
-  return (
-
-  )
-}
-const ExampleTextInput
-```
-
-First, we will create a React Component thatn
-
-First, add an empty div anywhere in the existing HTML that has a data-component-type attribute of the component you would like to create, for example 'example-text-input'
+To render a React component, you need to define a slot in your existing HTML. This slot is an empty div element with the appropriate data-component-type attribute (this will make sense later...). Here's an example:
 
 ```html
 <div
-  data-component-type="example-text-input"
-  data-initial-text="Hello SODA developer!"
+  data-component-type="button"
+  data-button-text="Hello, I am a button!"
+  data-button-id="guided-button-example"
 ></div>
 ```
 
-Next we will want to
+## Step 2: Create the React Component
 
-## How to raise requests errors to the error handler
+Next, create a React component that takes the data-button-text and data-button-id attributes from the HTML as props.
 
-From within any API endpoint code simply use the requests library 'raise_for_status()' method. There is no need to catch this or re-raise it unless you need to do some processing / procedure at the time of an error's occurrence before re-raising. For example, in the upload function main_curate_function we catch any errors that are raised so that we can change the curation status before the error is then re-raised to the central error handler.
+```jsx
+import { Button } from '@mantine/core';
 
-In some instances you may want to build out a longer error message. For example, if you are scanning for invalid files in a user's dataset. In these instances catch the errors to prevent them from raising and build out the message.
+const CustonButton = ({buttonId, buttonText}}) => {
 
-## Handling Pennsieve errors
+  return (
+    <Button id={buttonId}>{buttonText}</Button>
+  )
+}
+export default CustonButton;
+```
 
-Any Pennsieve error may be a 5xx error. If doing any of the above processing be sure to make sure the error was nit a 5xx. If it is reraise the error without modifying it so it can be processed by the error handler in the most appropriate manner.
+## Step 3: Add the Component to the Renderer
 
-::: tip
-There are functions for checking if the pennsieve response is a 5xx or some other 4xx. These can be found in the pennsieveUnexpectedError.py file.
-There is also functions for checking if the pennsieve servce is down. In these cases raise the error to the central error handler.
-:::
+Now that you have a CustomButton component and the HTML slot where it will be rendered, you need to update the componentTypeRenderers object in ReactComponentRenderer.jsx to include your new component type.
 
-# Handling werkzeug errors
+```js
 
-Create werkzeug errors using abort whenever sending a custom error. The error handler will send these up to the user as is.
+import CustomButton from './path-to/button'
+// Mapping of component types to their render functions
+const componentTypeRenderers = {
+  ...,
+  "custom-button": (componentSlot) => {
+    // Extract props from the HTML
+    const props = {
+      buttonId: componentSlot.getAttribute("data-button-id"),
+      buttonText: componentSlot.getAttribute("data-button-text")
+    }
+    /* Use renderComponent function used by all other renderers to mount the component to the DOM */
+    renderComponent(componentSlot, <CustomButton {...props}>)
+  }
+}
+```
 
-# Handling python exceptions
+# Adding State Management with Zustand
 
-Any python exception raised to the error handler is essentially an unexpected error. This will be handled by sending back a 500 the the client.
+Now let's extend this example to include state management using Zustand.
+
+## Step 4: Add a Zustand Store state slice
+
+Create a Zustand store to manage the state. Let's say you want to manage a simple counter.
+
+```js
+import useGlobalStore from '../globalStore'; // Import the global state store
+import { produce } from 'immer'; // produce makes working with nested state modifications easier
+
+export const counterSlice = (set) => ({
+  counterVariable: 0,
+});
+
+// State modification methods are defined outside of the slice for easier use in non-React js files
+export const incrementCount = () => {
+  useGlobalStore.setState(
+    produce((state) => {
+      state.counterVariable = state.counterVariable + 1;
+    }),
+  );
+};
+
+export const decrementCount = () => {
+  useGlobalStore.setState(
+    produce((state) => {
+      state.counterVariable = state.counterVariable - 1;
+    }),
+  );
+};
+```
+
+## Step 5: Integrate the Slice into the Global Store
+
+```js
+import { counterSlice } from './slices/counterSlice';
+
+const useGlobalStore = create(
+  immer((...a) => ({
+    ...guidedModeSlice(...a),
+    ...counterSlice(...a), // Add the slice to the global store
+  })),
+);
+```
+
+## Step 6: Update the Component to Use Zustand
+
+Update your CustomButton component to use Zustand for managing and updating the counter state.
+
+```jsx
+import { Text, Button } from '@mantine/core';
+import useGlobalStore from '../globalStore';
+import { incrementCounter, decrementCounter } from '../counterSlice'
+
+const CustonButton = ({buttonId, buttonText}}) => {
+  // Extract the counterVariable from the state store.
+  // Note: When this value changes from either hitting the increment/decrement buttons or from
+  // an external js file, the component will be re-rendered.
+  const counterVariable = useGlobalStore((state) => state.counterVariable)
+  return (
+    <div>
+      <Button id={buttonId}>{buttonText}</Button>
+      <Button onClick={incrementCounter}>Increment</Button>
+      <Button onClick={decrementCounter}>Decrement</Button>
+      <Text>{counterVariable}</Text>
+    </div>
+  )
+}
+export default CustonButton;
+```
+
+# Modifying the global store state values outside of React
+
+Example of accessing and modifying Zustand store values in a vanilla JavaScript file.
+
+```js
+import useGlobalStore from '../../stores/globalStore'; // Import global store to retrieve state
+import {
+  incrementCounter,
+  decrementCounter,
+} from '../../stores/slices/counterSlice';
+
+// To get the state value in a js file, call the getState method on the store
+const counterValue = useGlobalStore.getState()['counterVariable'];
+
+// You can also call the store methods in vanilla js files
+if (counterValue === 5) {
+  incrementCounter(); // Adds one to the counter and re-renders the react components that use it
+} else {
+  decrementCounter();
+}
+```
