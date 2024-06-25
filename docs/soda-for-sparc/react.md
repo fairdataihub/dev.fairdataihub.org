@@ -22,7 +22,7 @@ To render a React component, you need to define a slot in your existing HTML. Th
 
 ```html
 <div
-  data-component-type="button"
+  data-component-type="custom-button"
   data-button-text="Hello, I am a button!"
   data-button-id="guided-button-example"
 ></div>
