@@ -1,3 +1,10 @@
+# [2.14.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.13.0...v2.14.0) (2024-08-13)
+
+
+### Features
+
+* analytics page information ([b2f28a3](https://github.com/fairdataihub/dev.fairdataihub.org/commit/b2f28a331a2a04aae873e54f184d56d63fbf4729))
+
 # [2.13.0](https://github.com/fairdataihub/dev.fairdataihub.org/compare/v2.12.7...v2.13.0) (2023-10-30)
 
 
