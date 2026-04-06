@@ -33,4 +33,3 @@ git clone https://github.com/fairdataihub/dev.fairdataihub.org.git
 - Create a PR to the main branch with [@megasanjay](https://github.com/megasanjay) and/or [@aaronm-2112](https://github.com/aaronm-2112) as reviewers
 - After approval merge the PR into `main`
 
-These docs use Vercel to automatically deploy to the [Fair Data Innovations Hub developer documentation site](https://dev.fairdataihub.org/).
