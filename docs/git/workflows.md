@@ -55,7 +55,7 @@ jobs:
 
       # ESLint and Prettier must be in `package.json`
       - name: Install Node.js dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Run ESLint
         uses: wearerequired/lint-action@v2
@@ -209,12 +209,12 @@ jobs:
           node-version: 16
 
       - name: Install Node.js dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Run Cypress tests on Chrome
         uses: cypress-io/github-action@v4
         with:
-          start: yarn dev
+          start: pnpm dev
           browser: chrome
 
   firefox:
@@ -236,12 +236,12 @@ jobs:
           node-version: 16
 
       - name: Install Node.js dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Run Cypress tests on Firefox
         uses: cypress-io/github-action@v4
         with:
-          start: yarn dev
+          start: pnpm dev
           browser: firefox
 
   edge:
@@ -262,12 +262,12 @@ jobs:
           node-version: 16
 
       - name: Install Node.js dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Run Cypress tests on Edge
         uses: cypress-io/github-action@v4
         with:
-          start: yarn dev
+          start: pnpm dev
           browser: edge
 ```
 
@@ -297,12 +297,12 @@ jobs:
           node-version: 16
 
       - name: Install Node.js dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_ACTIONS }}
-        run: yarn semantic-release
+        run: pnpm semantic-release
 ```
 
 For this action to work a number of prerequisites must be met.
@@ -310,7 +310,7 @@ For this action to work a number of prerequisites must be met.
 The following packages must be added to your repository:
 
 ```sh
-yarn add -D @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/github @semantic-release/release-notes-generator semantic-release @semantic-release/npm
+pnpm add -D @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/github @semantic-release/release-notes-generator semantic-release @semantic-release/npm
 ```
 
 Add a `.releaserc.json` file to the root of your project. You can adjust these items as needed.

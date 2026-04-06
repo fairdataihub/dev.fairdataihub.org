@@ -13,7 +13,13 @@ head:
 This page holds some quick little instructions for setting up a project for FAIR Data Innovations Hub. It gives you some snippets for setting up all the required dev tools. Feel free to modify these snippets to your needs.
 
 :::warning
-The following instructions assume that you are using Yarn. If you are using npm or pnpm, you will need to change the instruction accordingly.
+The following instructions assume that you are using pnpm.
+
+Use mise to manage your Node.js and pnpm toolchain from the repository root:
+
+```sh
+mise install
+```
 :::
 
 ## Developer dependencies
@@ -21,11 +27,11 @@ The following instructions assume that you are using Yarn. If you are using npm 
 Install the following dependencies for your project:
 
 ```sh
-yarn add -D @commitlint/cli @commitlint/config-conventional commitizen cz-conventional-changelog
-yarn add -D @fairdataihub/config megasanjay-devmoji
-yarn add -D @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/github @semantic-release/npm @semantic-release/release-notes-generator semantic-release
-yarn add -D eslint prettier eslint-config-prettier eslint-plugin-prettier prettier-plugin-tailwindcss
-yarn add -D eslint-config-next eslint-import-resolver-typescript
+pnpm add -D @commitlint/cli @commitlint/config-conventional commitizen cz-conventional-changelog
+pnpm add -D @fairdataihub/config megasanjay-devmoji
+pnpm add -D @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/github @semantic-release/npm @semantic-release/release-notes-generator semantic-release
+pnpm add -D eslint prettier eslint-config-prettier eslint-plugin-prettier prettier-plugin-tailwindcss
+pnpm add -D eslint-config-next eslint-import-resolver-typescript
 ```
 
 ## Husky
@@ -33,18 +39,18 @@ yarn add -D eslint-config-next eslint-import-resolver-typescript
 Install the following dependencies for your project:
 
 ```sh
-npx husky-init
-yarn add run-script-os
-yarn install
+pnpm dlx husky-init
+pnpm add run-script-os
+pnpm install
 ```
 
 Add the following hooks to your husky installation:
 
 ```sh
-npx husky add .husky/commit-msg 'yarn commitlint --edit $1'
-npx husky add .husky/pre-commit 'yarn lint-staged'
-npx husky add .husky/prepare-commit-msg 'npx megasanjay-devmoji -e --lint'
-npx husky add .husky/post-merge 'yarn install'
+pnpm exec husky add .husky/commit-msg 'pnpm commitlint --edit $1'
+pnpm exec husky add .husky/pre-commit 'pnpm lint-staged'
+pnpm exec husky add .husky/prepare-commit-msg 'pnpm exec megasanjay-devmoji -e --lint'
+pnpm exec husky add .husky/post-merge 'pnpm install'
 ```
 
 ## Lint staged
@@ -52,7 +58,7 @@ npx husky add .husky/post-merge 'yarn install'
 Run the following command to install the lint staged plugin:
 
 ```sh
-yarn add -D lint-staged
+pnpm add -D lint-staged
 ```
 
 Add the following scripts to your `package.json` file:
@@ -74,8 +80,8 @@ Also add the following keys to your `package.json` file:
 ```json
   "lint-staged": {
     "./**/*.{ts,js,jsx,tsx}": [
-      "yarn lint --fix",
-      "yarn format"
+      "pnpm lint --fix",
+      "pnpm format"
     ]
   },
   "config": {

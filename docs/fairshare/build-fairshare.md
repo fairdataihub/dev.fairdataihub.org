@@ -45,7 +45,7 @@ git push --delete origin tagname
 Run the python installer command to create the python executable:
 
 ```sh
-yarn python:build
+pnpm run python:build
 ```
 
 For more information on this step refer to the [packaging](https://fairshareapp.io/docs/developer-documentation/building-the-application#create-python-executable) entry.
@@ -55,7 +55,7 @@ For more information on this step refer to the [packaging](https://fairshareapp.
 Finally, If the GitHub token shows up after checking verifying its visibility, then run:
 
 ```sh
-yarn electron:build-release
+pnpm run electron:build-release
 ```
 
 - This should create a draft release on GitHub with the latest and version tag.
@@ -95,7 +95,7 @@ git push --delete origin tagname
 Run the python installer command to create the python executable:
 
 ```sh
-yarn python:build
+pnpm run python:build
 ```
 
 For more information on this step refer to the [packaging](https://fairshareapp.io/docs/developer-documentation/building-the-application#create-python-executable) wiki entry.
@@ -105,7 +105,7 @@ For more information on this step refer to the [packaging](https://fairshareapp.
 Finally, If the GitHub token shows up after checking verifying its visibility, then run:
 
 ```sh
-yarn electron:build-release
+pnpm run electron:build-release
 ```
 
 - This should create a draft release on GitHub with the latest and version tag.
@@ -160,7 +160,7 @@ git push --delete origin tagname
 Run the python installer command to create the python executable:
 
 ```sh
-yarn python:build
+pnpm run python:build
 ```
 
 For more information on this step refer to the [packaging](https://fairshareapp.io/docs/developer-documentation/building-the-application#create-python-executable) wiki entry.
@@ -170,7 +170,7 @@ For more information on this step refer to the [packaging](https://fairshareapp.
 Finally, If the GitHub token shows up after checking verifying its visibility, then run:
 
 ```sh
-yarn electron:build-release
+pnpm run electron:build-release
 ```
 
 - This should create a draft release on GitHub with the latest and version tag.

@@ -45,7 +45,7 @@ git push --delete origin tagname
 Run the python installer command to create the python executable:
 
 ```sh
-npm run python-onefile-build-win
+pnpm run python-onefile-build-win
 ```
 
 For more information on this step refer to the [packaging](https://github.com/fairdataihub/SODA-for-SPARC/wiki/Packaging) wiki entry.
@@ -55,7 +55,7 @@ For more information on this step refer to the [packaging](https://github.com/fa
 Finally, If the GitHub token shows up after checking verifying its visibility, then run:
 
 ```sh
-npm run deploy-win
+pnpm run deploy-win
 ```
 
 - This should create a draft release on GitHub with the latest and version tag.
@@ -95,7 +95,7 @@ git push --delete origin tagname
 Run the python installer command to create the python executable:
 
 ```sh
-npm run python-onefile-build
+pnpm run python-onefile-build
 ```
 
 For more information on this step refer to the [packaging](https://github.com/fairdataihub/SODA-for-SPARC/wiki/Packaging) wiki entry.
@@ -105,7 +105,7 @@ For more information on this step refer to the [packaging](https://github.com/fa
 Finally, If the GitHub token shows up after checking verifying its visibility, then run:
 
 ```sh
-npm run deploy-linux
+pnpm run deploy-linux
 ```
 
 - This should create a draft release on GitHub with the latest and version tag.
@@ -160,7 +160,7 @@ git push --delete origin tagname
 Run the python installer command to create the python executable:
 
 ```sh
-npm run python-onefile-build
+pnpm run python-onefile-build
 ```
 
 For more information on this step refer to the [packaging](https://github.com/fairdataihub/SODA-for-SPARC/wiki/Packaging) wiki entry.
@@ -170,7 +170,7 @@ For more information on this step refer to the [packaging](https://github.com/fa
 Finally, If the GitHub token shows up after checking verifying its visibility, then run:
 
 ```sh
-npm run deploy-mac
+pnpm run deploy-mac
 ```
 
 - This should create a draft release on GitHub with the latest and version tag.

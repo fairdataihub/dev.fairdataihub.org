@@ -10,13 +10,16 @@ head:
 
 # Overview
 
+::: danger
+This package is being deprecated and will be removed in the future. We recommend that you copy the config files into your project and modify them as needed. This will give you more flexibility and control over your config files.
+:::
+
 Since we use nodejs in a lot of our projects, we have a lot of config files to manage. To make this easier, an npm package has been created to manage these files. This package is called [@fairdataihub/config](https://www.npmjs.com/package/@fairdataihub/config). This is not an exhaustive list of config files, but it should be enough to get you started.
 
 Install this module into your project by running:
 
 ```sh
-npm install --save-dev @fairdataihub/config
-yarn add -D @fairdataihub/config
+pnpm add -D @fairdataihub/config
 ```
 
 :::tip

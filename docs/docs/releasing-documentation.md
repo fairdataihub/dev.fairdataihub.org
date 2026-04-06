@@ -28,7 +28,7 @@ You can get a deeper understanding of [Semantic Versioning](https://semver.org/)
    - If the docs are ready to be versioned (there will be a new release of `FAIRshare` or `SODA for SPARC` and you updated the Changelog accordingly) run this command:
 
    ```shell
-    yarn run docusaurus docs:version 5.3.1
+    pnpm exec docusaurus docs:version 5.3.1
    ```
 
    - The version number in this command will be displayed in the version dropdown on the docs site. Ensure it matches the version number of SODA for SPARC or FAIRshare.

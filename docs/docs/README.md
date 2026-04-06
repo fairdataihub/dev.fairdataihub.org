@@ -18,17 +18,21 @@ head:
 
 ### ⚠️ Prerequisites
 
-This project uses `Yarn` as package manager.
+This project uses `pnpm` as package manager.
 
 ```sh
-npm install --global yarn
+mise install
 ```
+
+The project toolchain is managed by `mise` using the versions in `mise.toml`.
 
 If you already have a conda environment on your machine, you can install the dependencies with:
 
 ```sh
-conda install -c conda-forge yarn nodejs
+conda install -c conda-forge nodejs pnpm
 ```
+
+
 
 ### Run locally
 
@@ -47,13 +51,13 @@ cd dev.fairdataihub.org
 Install dependencies
 
 ```sh
-yarn install
+pnpm install
 ```
 
 Start the server
 
 ```sh
-yarn dev
+pnpm dev
 ```
 
 ### Build locally
@@ -61,7 +65,7 @@ yarn dev
 Use this step to build a local production version of the site. Use `serve` to preview the local build.
 
 ```sh
-yarn docs:build
+pnpm docs:build
 ```
 
 ## Acknowledgements
@@ -69,3 +73,5 @@ yarn docs:build
 A special thank you to Vercel for hosting our application documentation.
 
 ![](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)
+
+
